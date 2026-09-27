@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5f1" />
+    <meta name="description" content="Pocket Tasks helps you keep a simple, private task list." />
+    <title>Pocket Tasks</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Pocket Tasks home">
+          <span class="brand-mark" aria-hidden="true">✓</span>
+          <span>Pocket Tasks</span>
+        </a>
+        <span class="header-note">A little space to get things done.</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">SIMPLE. PRIVATE. YOURS.</p>
+          <h1 id="page-title">Make room for what <em>matters.</em></h1>
+          <p class="intro-copy">Keep your to-dos in one calm place. Add a task, check it off, and move on with your day.</p>
+        </section>
+
+        <div id="setup-warning" class="notice notice-warning hidden" role="alert">
+          <strong>Supabase setup needed.</strong> Add your project URL and publishable key to a <code>.env</code> file, then restart the app. The README has the steps.
+        </div>
+        <div id="message" class="notice hidden" role="status" aria-live="polite"></div>
+
+        <section id="auth-panel" class="card auth-card" aria-labelledby="auth-title">
+          <div class="auth-heading">
+            <div>
+              <p class="eyebrow">WELCOME IN</p>
+              <h2 id="auth-title">Log in to your list</h2>
+              <p id="auth-subtitle">Your tasks are saved securely to your account.</p>
+            </div>
+            <div class="auth-icon" aria-hidden="true">✦</div>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Account access">
+            <button id="login-tab" type="button" class="tab active" role="tab" aria-selected="true">Log in</button>
+            <button id="register-tab" type="button" class="tab" role="tab" aria-selected="false">Create account</button>
+          </div>
+
+          <form id="auth-form">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters" />
+            <button id="auth-submit" class="button button-primary full-width" type="submit">Log in</button>
+          </form>
+          <p id="auth-hint" class="auth-hint">New here? Select <strong>Create account</strong> above.</p>
+        </section>
+
+        <section id="tasks-panel" class="tasks-layout hidden" aria-labelledby="tasks-title">
+          <div class="workspace-header">
+            <div>
+              <p class="eyebrow">YOUR SPACE</p>
+              <h2 id="tasks-title">My tasks</h2>
+              <p id="task-summary">A fresh start, one task at a time.</p>
+            </div>
+            <div class="account-controls">
+              <span id="account-email"></span>
+              <button id="logout-button" class="button button-outline" type="button">Log out</button>
+            </div>
+          </div>
+
+          <div class="card add-card">
+            <form id="add-form" class="add-form">
+              <label class="sr-only" for="new-task">New task</label>
+              <input id="new-task" type="text" maxlength="120" required placeholder="What needs to get done?" />
+              <button id="add-button" class="button button-primary" type="submit">Add task <span aria-hidden="true">+</span></button>
+            </form>
+          </div>
+
+          <div class="list-topline">
+            <div class="filter-group" aria-label="Filter tasks">
+              <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter" type="button" data-filter="active" aria-pressed="false">To do</button>
+              <button class="filter" type="button" data-filter="done" aria-pressed="false">Done</button>
+            </div>
+            <span id="task-count">0 tasks</span>
+          </div>
+          <ul id="task-list" class="task-list" aria-live="polite"></ul>
+          <div id="empty-state" class="empty-state card hidden">
+            <div class="empty-icon" aria-hidden="true">✓</div>
+            <h3 id="empty-title">No tasks yet</h3>
+            <p id="empty-copy">Add your first task above to get started.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">A simple place to keep moving forward.</footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
