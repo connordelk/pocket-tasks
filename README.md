@@ -4,7 +4,7 @@ Pocket Tasks is a small, private task manager. Create an account, log in, add ta
 
 **Live app:** [Pocket Tasks on Netlify](https://incandescent-kangaroo-36ee2b.netlify.app/)  
 **GitHub repository:** [connordelk/pocket-tasks](https://github.com/connordelk/pocket-tasks)  
-**Demo video:** Add your unlisted YouTube URL here after recording.
+**Demo video:** (https://www.youtube.com/watch?v=CdIOgh4GKqk)
 
 ## What the app does
 
