@@ -83,4 +83,4 @@ DEMO_GUIDE.md       3–5 minute video outline
 
 ## GitHub and submission
 
-This project has a series of meaningful commits on `main`. After adding your unlisted video link to the README, commit and push that last change. Submit the [public GitHub repository](https://github.com/connordelk/pocket-tasks) URL on Canvas. See [`DEMO_GUIDE.md`](DEMO_GUIDE.md) for a short walkthrough plan.
+This project has a series of meaningful commits on `main`. After recording, edit this README on GitHub to add your unlisted video link, then commit that change. Submit the [public GitHub repository](https://github.com/connordelk/pocket-tasks) URL on Canvas. See [`DEMO_GUIDE.md`](DEMO_GUIDE.md) for a short walkthrough plan.
